@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rashmi Nagpal</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #ffffff;
+            color: #424242;
+        }
+
+        /* Navigation styles */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #424242;
+            text-decoration: none;
+            font-weight: 400;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+            font-family: Georgia, serif;
+        }
+
+        .nav-links a:hover {
+            color: #a08036;
+        }
+
+        .subtitle_text {
+            font-family: Georgia, serif;
+            font-size: 1.5rem;
+            color: #424242;
+            text-align: center;
+            margin-top: 10rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        .papertitle {
+            font-family: Georgia, serif;
+            font-size: 1.1rem;
+        }
+
+        .papertitle a {
+            color: #424242;
+            text-decoration: none;
+        }
+
+        .conf {
+            font-family: Georgia, serif;
+            font-size: 0.9rem;
+        }
+
+        .publication-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .publication-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .paper-title {
+            font-family: Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #424242;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-title a {
+            color: #424242;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .paper-title a:hover {
+            color: #a08036;
+        }
+
+        .authors {
+            font-family: Georgia, serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .venue {
+            font-family: Georgia, serif;
+            font-size: 0.9rem;
+            color: #424242;
+            font-weight: bold;
+        }
+
+        .pdf-link {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            background-color: #424242;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+        }
+
+        .pdf-link:hover {
+            background-color: #a08036;
+            color: white;
+            text-decoration: none;
+        }
+
+        .media-highlight {
+            background-color: #f8f4e9;
+            border-left: 4px solid #a08036;
+        }
+
+        .media-badge {
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            background-color: #a08036;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 1rem;
+        }
+
+        .review-badge {
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            background-color: #666;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 1rem;
+        }
+
+        .thisauthor {
+            font-weight: bold;
+            color: #a08036;
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="publications.html">Publications</a>
+            <a href="projects.html">Projects</a>
+            <a href="talks.html">Talks</a>
+        </div>
+    </nav>
+    <div class="container pt-4 allstuffp">
+        <div class="row pt-5 allstuff">
+            <div class="col-lg-9 mx-auto pt-5 about text-justify">
+                <div class="subtitle_text">PUBLICATIONS</div>
+
+                <!-- Media Coverage -->
+                <div class="publication-item media-highlight">
+                    <div class="paper-title">
+                        <a href="https://www.hindustantimes.com/your-link-here" target="_blank">
+                            Machine Learning Research Featured in National Media
+                        </a>
+                        <span class="media-badge">HINDUSTAN TIMES</span>
+                    </div>
+                    <div class="venue">Featured in Hindustan Times, One of India's Largest National Newspapers</div>
+                </div>
+
+                <!-- Academic Publications -->
+                <div class="publication-item">
+                    <div class="paper-title">
+                        FairRAG: A Privacy-Preserving Framework for Fair Financial Decision-Making
+                        <span class="review-badge">IN REVIEW</span>
+                    </div>
+                    <div class="authors"><span class="thisauthor">Nagpal R.</span>, Kommala I., Gupta A.</div>
+                    <div class="venue">Applied Sciences, MDPI 2025</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="paper-title">
+                        Conversational Style Labels and Analysis for the Switchboard Dataset
+                        <span class="review-badge">IN REVIEW</span>
+                    </div>
+                    <div class="authors"><span class="thisauthor">Nagpal R.</span>, Fatty S., Aliston A., Burrell J., D. G. Brizan</div>
+                    <div class="venue">International Conference on Natural Language Processing, 2025</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="paper-title">
+                        <a href="https://www.mdpi.com/2504-4990/6/3/105" target="_blank">
+                            Multi-Objective Framework to Balancing Fairness and Accuracy for Debiasing Machine Learning Models
+                        </a>
+                    </div>
+                    <div class="authors"><span class="thisauthor">Nagpal R.</span>, Khan A., Borkar M., Gupta A.</div>
+                    <div class="venue">Machine Learning and Knowledge Extraction, MDPI 2024</div>
+                    <a href="https://www.mdpi.com/2504-4990/6/3/105" target="_blank" class="pdf-link">VIEW PDF</a>
+                </div>
+
+                <div class="publication-item">
+                    <div class="paper-title">
+                        <a target="_blank" href="https://link.springer.com/content/pdf/10.1007/s43681-024-00508-4.pdf">Optimizing Fairness and Accuracy: A Pareto Optimal Approach for Decision-Making</a>
+                    </div>
+                    <div class="authors"><span class="thisauthor">Nagpal R.</span>, Shahsavarifar R., Goyal V., Gupta A.</div>
+                    <div class="venue">Springer AI and Ethics Journal 2024</div>
+                    <a href="https://link.springer.com/content/pdf/10.1007/s43681-024-00508-4.pdf" target="_blank" class="pdf-link">VIEW PDF</a>
+                </div>
+
+                <div class="publication-item">
+                    <div class="paper-title">
+                        <a target="_blank" href="https://ieeexplore.ieee.org/document/10613569">A Survey of Conversational Styles and Systems</a>
+                    </div>
+                    <div class="authors"><span class="thisauthor">Nagpal R.</span>, S. Fatty and D. G. Brizan</div>
+                    <div class="venue">16th International Conference on Human System Interaction, IEEE 2024</div>
+                    <a href="https://ieeexplore.ieee.org/document/10613569" target="_blank" class="pdf-link">VIEW PDF</a>
+                </div>
+
+                <div class="publication-item">
+                    <div class="paper-title">
+                        <a target="_blank" href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=uQMhijAAAAAJ&citation_for_view=uQMhijAAAAAJ:d1gkVwhDpl0C">Conversational Styles: A Survey of Features & Distributions on the Switchboard Corpus</a>
+                    </div>
+                    <div class="authors"><span class="thisauthor">Nagpal R.</span>, Arshad F. and D. G. Brizan</div>
+                    <div class="venue">International American Association for Corpus Linguistics Conference 2022</div>
+                    <a href="https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=uQMhijAAAAAJ&citation_for_view=uQMhijAAAAAJ:d1gkVwhDpl0C" target="_blank" class="pdf-link">VIEW PDF</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
+</body>
+</html>
