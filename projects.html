@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rashmi Nagpal</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #ffffff;
+            color: #424242;
+        }
+
+        .top-nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #424242;
+            text-decoration: none;
+            font-weight: 400;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+            font-family: Georgia, serif;
+        }
+
+        .nav-links a:hover {
+            color: #a08036;
+        }
+
+        .subtitle_text {
+            font-family: Georgia, serif;
+            font-size: 1.5rem;
+            color: #424242;
+            text-align: center;
+            margin-top: 10rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        .papertitle {
+            font-family: Georgia, serif;
+            font-size: 1.1rem;
+        }
+
+        .papertitle a {
+            color: #424242;
+            text-decoration: none;
+        }
+
+        .conf {
+            font-family: Georgia, serif;
+            font-size: 0.9rem;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .project-title {
+            font-family: Georgia, serif;
+            font-size: 1.3rem;
+            color: #424242;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .project-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background-color: #f5f5f5;
+            color: #666;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #424242;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            background-color: #a08036;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="publications.html">Publications</a>
+            <a href="projects.html">Projects</a>
+            <a href="talks.html">Talks</a>
+        </div>
+    </nav>
+    <div class="container pt-4 allstuffp">
+        <div class="row pt-5 allstuff">
+            <div class="col-lg-9 mx-auto pt-5 about text-justify">
+                <div class="subtitle_text">PROJECTS</div>
+
+                <div class="project-card">
+                    <div class="project-title">Vision Transformer for CIFAR-10 Classification</div>
+                    <div class="project-description">
+                        Implemented an advanced image classification system using Vision Transformers (ViT) on the CIFAR-10 dataset. The project showcases the power of transformer architectures in computer vision tasks, featuring custom training loops, validation monitoring, and early stopping mechanisms for optimal performance.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Vision Transformers</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                    <a href="https://github.com/RN0311/LLMs-applications/blob/main/finetunedllms_applications/image_classification/cifar10_imageclassification.py" target="_blank" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">AI Music Generator with Artist Style Transfer</div>
+                    <div class="project-description">
+                        Developed an innovative music generation system using Facebook's MusicGen model that can create music in the style of specific artists. The system features prompt engineering techniques to generate music with characteristics of artists like Diljit Dosanjh (with Punjabi beats) and Taylor Swift (pop-country fusion).
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">MusicGen</span>
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">Audio Processing</span>
+                    </div>
+                    <a href="https://github.com/RN0311/LLMs-applications/blob/main/finetunedllms_applications/music_generation/artist_style_musicgen.py" target="_blank" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Multi-Objective Framework for Debiasing ML Models</div>
+                    <div class="project-description">
+                        A comprehensive framework that balances fairness and accuracy in machine learning models, specifically designed for credit scoring systems. The project implements novel optimization techniques to reduce bias while maintaining model performance.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Optimization</span>
+                        <span class="tech-tag">Fairness</span>
+                    </div>
+                    <a href="https://github.com/RN0311/Multiobjective-Optimization-For-Debiasing-Credit-System" target="_blank" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Deep Learning Neural Networks in Go</div>
+                    <div class="project-description">
+                        Implementation of neural networks from scratch in Go language, featuring feedforward and backpropagation algorithms. The project demonstrates how to build efficient deep learning systems using Go's concurrent capabilities.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Go</span>
+                        <span class="tech-tag">Neural Networks</span>
+                        <span class="tech-tag">Deep Learning</span>
+                    </div>
+                    <a href="https://github.com/RN0311/deep-learning-for-gophers" target="_blank" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">IMDB Movie Review Sentiment Analysis</div>
+                    <div class="project-description">
+                        A sentiment analysis system built using DistilBERT for analyzing movie reviews. The project demonstrates fine-tuning transformer models for sentiment classification tasks.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">DistilBERT</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">PyTorch</span>
+                    </div>
+                    <a href="https://github.com/RN0311/LLMs-applications/blob/main/finetunedllms_applications/sentiment_analysis/movie_review.py" target="_blank" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">GPT-3.5 Powered Q&A System</div>
+                    <div class="project-description">
+                        An intelligent question-answering system built using GPT-3.5 and LangChain. The system can process PDF documents and provide accurate answers based on the content.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">GPT-3.5</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">NLP</span>
+                    </div>
+                    <a href="https://github.com/RN0311/LLMs-applications/blob/main/langchain_applications/question_answering_system/qa_system.py" target="_blank" class="project-link">View Project</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Copy footer scripts from index.html -->
+</body>
+</html>
