@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rashmi Nagpal</title>
+
+    <!-- Font imports from index.html -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            font-family: 'Georgia', sans-serif;
+            background-color: #ffffff;
+            color: #424242;
+        }
+
+        /* Navigation styles */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #424242;
+            text-decoration: none;
+            font-weight: 400;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #a08036;
+        }
+
+        /* Title style */
+        .subtitle_text {
+            font-size: 1.5rem;
+            color: #424242;
+            text-align: center;
+            margin-top: 10rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        /* Updated education container styles */
+        .education-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto 30px auto;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: none;
+        }
+
+        .university-logo {
+            flex: 0 0 200px;
+            margin-right: 40px;
+        }
+
+        .university-logo img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            object-fit: contain;
+        }
+
+        .education-details {
+            flex: 1;
+            padding: 10px 0;
+            min-width: 0;
+        }
+
+        .education-details h3 {
+            margin: 0 0 10px 0;
+            color: #424242;
+            font-size: 1.2rem;
+            font-weight: 700;
+            white-space: nowrap;
+            max-width: 100%;
+        }
+
+        .education-location {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            font-weight: 300;
+        }
+
+        .education-degree {
+            color: #424242;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .education-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .coursework {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #424242;
+            font-weight: 300;
+        }
+
+        .coursework strong {
+            font-weight: 500;
+        }
+
+        /* Adjust the container width for better responsiveness */
+        .col-lg-9 {
+            max-width: 1400px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="publications.html">Publications</a>
+            <a href="projects.html">Projects</a>
+            <a href="talks.html">Talks</a>
+        </div>
+    </nav>
+
+    <div class="container pt-4 allstuffp">
+        <div class="row pt-5 allstuff">
+            <div class="col-lg-9 mx-auto pt-5 about text-justify">
+                <div class="subtitle_text">EDUCATION</div>
+                
+                <div class="education-container">
+                    <div class="university-logo">
+                        <img src="/images/berkeley.png" alt="Plaksha & Berkeley Logo">
+                    </div>
+                    <div class="education-details">
+                        <h3>Postgraduate Program in Artificial Intelligence & Leadership<h3>
+                        <div class="education-degree">TechLeaders Fellowship, SCET University of California, Berkeley </div>
+                        <div class="coursework">
+                            <strong>Research Capstone:</strong> XAI in Cybersecurity | University of Maryland 
+                        </div>
+                        <div class="coursework">
+                            <strong>Industry Capstone:</strong> Research & Development | Nagarro, India
+                        </div>
+                        <div class="coursework">
+                            <strong>Relevant Coursework:</strong> Artificial Intelligence at Scale, Advanced Machine Learning and Data Science II
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-container">
+                    <div class="university-logo">
+                        <img src="/images/iiitd.png" alt="IIIT Delhi Logo">
+                    </div>
+                    <div class="education-details">
+                        <h3>Bachelors of Technology, Computer Science and Engineering</h3>
+                        <div class="education-degree">Indraprastha Institute Of Information Technology Delhi </div>
+                        <div class="coursework">
+                            <strong>Relevant Coursework:</strong> Natural Language Processing, Graph Theory, Data Mining
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
