@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachings & Life Lessons</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        :root {
+            --primary: #C17767;
+            --secondary: #9B4B3F;
+            --accent: #E6B89C;
+            --background: white;
+            --text: #2C1810;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: white;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .top-nav {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/400');
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .core-values {
+            padding: 4rem 2rem;
+            background-color: white;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .value-card {
+            background: var(--background);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .quotes {
+            background-color: var(--accent);
+            padding: 4rem 2rem;
+        }
+
+        .quote-card {
+            background: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .timeline {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .timeline-item {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--background);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .cultural {
+            background-color: var(--primary);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .cultural-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cultural-item {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .venn-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .venn-circle {
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .venn-circle:hover {
+            opacity: 0.9;
+        }
+
+        .venn-text {
+            font-size: 16px;
+            font-weight: bold;
+            text-anchor: middle;
+        }
+
+        .venn-intersection {
+            font-size: 14px;
+            text-anchor: middle;
+            fill: var(--text);
+        }
+
+        .sanskrit-quote {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/400');
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .quote-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .sanskrit {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .translation {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .source {
+            font-size: 1rem;
+        }
+
+        .flower-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .flower {
+            width: 100%;
+        }
+
+        .petal {
+            fill: var(--accent);
+            opacity: 0.7;
+            transition: all 0.5s ease;
+        }
+
+        .petal:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        .center {
+            fill: var(--primary);
+        }
+
+        .flower-text {
+            font-size: 14px;
+            text-anchor: middle;
+            fill: white;
+        }
+
+        @keyframes rotatePetals {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .flower .petal {
+            transform-origin: 200px 200px;
+            animation: rotatePetals 20s infinite linear;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .sanskrit {
+                font-size: 1.5rem;
+            }
+
+            .translation {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="publications.html">Publications</a>
+            <a href="projects.html">Projects</a>
+            <a href="talks.html">Talks</a>
+            <a href="news.html">News</a>
+            <a href="lectures.html">Lectures</a>
+            <a href="teachings.html">Fundamentals</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div>
+            <h1>My journey of growth & wisdom</h1>
+            <p>Lessons learned through perseverance, tradition, and dedication</p>
+        </div>
+    </div>
+
+    <section class="core-values" data-aos="fade-up">
+        <h2 style="text-align: center; margin-bottom: 2rem;">my core principles</h2>
+        <div class="venn-container">
+            <svg viewBox="0 0 400 300" class="venn-diagram">
+                <defs>
+                    <radialGradient id="gradient1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:var(--primary);stop-opacity:0.8"/>
+                        <stop offset="100%" style="stop-color:var(--primary);stop-opacity:0.4"/>
+                    </radialGradient>
+                    <radialGradient id="gradient2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:var(--secondary);stop-opacity:0.8"/>
+                        <stop offset="100%" style="stop-color:var(--secondary);stop-opacity:0.4"/>
+                    </radialGradient>
+                    <radialGradient id="gradient3" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:var(--accent);stop-opacity:0.8"/>
+                        <stop offset="100%" style="stop-color:var(--accent);stop-opacity:0.4"/>
+                    </radialGradient>
+                </defs>
+                <circle cx="150" cy="150" r="80" fill="url(#gradient1)" class="venn-circle"/>
+                <circle cx="250" cy="150" r="80" fill="url(#gradient2)" class="venn-circle"/>
+                <circle cx="200" cy="220" r="80" fill="url(#gradient3)" class="venn-circle"/>
+                <text x="100" y="150" class="venn-text">सेवा (endless service)</text>
+                <text x="300" y="150" class="venn-text">ज्ञान (knowledge)</text>
+                <text x="200" y="270" class="venn-text">दृढ़ता (perseverance)</text>
+                <text x="200" y="180" class="venn-intersection">धैर्य (grit)</text>
+            </svg>
+        </div>
+    </section>
+
+    <section class="sanskrit-quote" data-aos="fade-up">
+        <div class="quote-container">
+            <div class="sanskrit" data-aos="fade-up">
+                कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।
+                मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥
+            </div>
+            <div class="translation" data-aos="fade-up" data-aos-delay="100">
+                You have the right to work only, but never to its fruits.
+                Let not the fruits of action be your motive, nor let your attachment be to inaction.
+            </div>
+            <div class="source" data-aos="fade-up" data-aos-delay="200">
+                - Bhagavad Gita, Chapter 2, Verse 47
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="cultural" data-aos="fade-up">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Cultural Heritage</h2>
+        <div class="flower-container">
+            <svg viewBox="0 0 400 400" class="flower">
+                <path class="petal petal1" d="M200,200 Q150,150 200,100 Q250,150 200,200" />
+                <path class="petal petal2" d="M200,200 Q250,150 300,200 Q250,250 200,200" />
+                <path class="petal petal3" d="M200,200 Q150,250 200,300 Q250,250 200,200" />
+                <circle cx="200" cy="200" r="20" class="center" />
+                
+                <text x="200" y="130" class="flower-text">Gurudwara Influence</text>
+                <text x="300" y="200" class="flower-text">Independence Legacy</text>
+                <text x="200" y="270" class="flower-text">Sikh Values</text>
+            </svg>
+        </div>
+    </section> -->
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
