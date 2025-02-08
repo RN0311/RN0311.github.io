@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lectures - Rashmi Nagpal</title>
+  
+    <!-- Use the same font references as in index.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Although index.html also imports Roboto and loads league-gothic for titles, we ensure the body font matches by using Georgia -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background: white;
+            /* Updated font to match index.html */
+            font-family: 'Georgia', sans-serif;
+            background-color: #ffffff;
+            color: #424242;
+            font-size: 1rem;
         }
 
         .top-nav {
@@ -107,11 +117,9 @@
             .lecture-card {
                 grid-template-columns: 1fr;
             }
-
             .lecture-image {
                 height: 200px;
             }
-
             .nav-links {
                 gap: 1rem;
                 flex-wrap: wrap;
@@ -129,7 +137,7 @@
             <a href="talks.html">Talks</a>
             <a href="news.html">News</a>
             <a href="lectures.html">Lectures</a>
-            <a href="teachings.html">Fundamentals</a>
+            <a href="teachings.html">Lectures</a>
         </div>
     </nav>
 
@@ -137,27 +145,8 @@
         <h1 data-aos="fade-down">Academic Lectures</h1>
 
         <div class="lecture-grid">
+            <!-- 2023 Lecture -->
             <div class="lecture-card" data-aos="fade-up">
-                <img src="brusells.jpg" alt="Neural Networks Lecture at ULB" class="lecture-image">
-                <div class="lecture-content">
-                    <div class="lecture-year">2019</div>
-                    <h2 class="lecture-title">Neural Networks & Perceptron Fundamentals</h2>
-                    <div class="lecture-location">Université Libre de Bruxelles</div>
-                    <p>Delivered a comprehensive lecture on the basics of neural networks, activation functions, and the fundamental concepts of perceptron architecture.</p>
-                </div>
-            </div>
-
-            <div class="lecture-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="ulb.jpg" alt="Go Programming Lecture" class="lecture-image">
-                <div class="lecture-content">
-                    <div class="lecture-year">2020</div>
-                    <h2 class="lecture-title">Go Programming Language Fundamentals</h2>
-                    <div class="lecture-location">Université Libre de Bruxelles</div>
-                    <p>Conducted a detailed session on Go programming language basics and its applications in modern software development.</p>
-                </div>
-            </div>
-
-            <div class="lecture-card" data-aos="fade-up" data-aos-delay="200">
                 <img src="tallinn-uni.png" alt="Fair ML Models Lecture" class="lecture-image">
                 <div class="lecture-content">
                     <div class="lecture-year">2023</div>
@@ -167,13 +156,36 @@
                 </div>
             </div>
 
-            <div class="lecture-card" data-aos="fade-up" data-aos-delay="300">
+            <!-- 2022 Lecture -->
+            <div class="lecture-card" data-aos="fade-up" data-aos-delay="100">
                 <img src="plaksha.jpg" alt="Academic Career Session" class="lecture-image">
                 <div class="lecture-content">
                     <div class="lecture-year">2022</div>
-                    <h2 class="lecture-title">Building a Career in Academia</h2>
+                    <h2 class="lecture-title">Inspiring Students</h2>
                     <div class="lecture-location">Plaksha University</div>
-                    <p>Shared experiences and insights on building a successful career in academia and research.</p>
+                    <p>Shared experiences and insights on research / academic internships.</p>
+                </div>
+            </div>
+
+            <!-- 2020 Lecture -->
+            <div class="lecture-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="ulb.jpg" alt="Go Programming Lecture" class="lecture-image">
+                <div class="lecture-content">
+                    <div class="lecture-year">2020</div>
+                    <h2 class="lecture-title">Go Programming Language Fundamentals</h2>
+                    <div class="lecture-location">Université Libre de Bruxelles</div>
+                    <p>Conducted a detailed session on Go programming language basics and its applications in modern software development.</p>
+                </div>
+            </div>
+
+            <!-- 2019 Lecture -->
+            <div class="lecture-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="brusells.jpg" alt="Neural Networks Lecture at ULB" class="lecture-image">
+                <div class="lecture-content">
+                    <div class="lecture-year">2019</div>
+                    <h2 class="lecture-title">Neural Networks Fundamentals</h2>
+                    <div class="lecture-location">Université Libre de Bruxelles</div>
+                    <p>Delivered a comprehensive lecture on the basics of neural networks, activation functions, and the fundamental concepts of perceptron architecture.</p>
                 </div>
             </div>
         </div>
