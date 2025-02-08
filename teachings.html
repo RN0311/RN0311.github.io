@@ -29,18 +29,17 @@
         }
 
         .top-nav {
-            background-color: white;
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
+            position: fixed;
             top: 0;
+            right: 0;
+            padding: 20px;
             z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
         }
 
         .nav-links {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
+            gap: 20px;
         }
 
         .nav-links a {
@@ -52,22 +51,6 @@
 
         .nav-links a:hover {
             color: #007bff;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/400');
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
         }
 
         .core-values {
@@ -235,10 +218,6 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
             .sanskrit {
                 font-size: 1.5rem;
             }
@@ -262,13 +241,6 @@
             <a href="teachings.html">Fundamentals</a>
         </div>
     </nav>
-
-    <div class="hero">
-        <div>
-            <h1>My journey of growth & wisdom</h1>
-            <p>Lessons learned through perseverance, tradition, and dedication</p>
-        </div>
-    </div>
 
     <section class="core-values" data-aos="fade-up">
         <h2 style="text-align: center; margin-bottom: 2rem;">my core principles</h2>
@@ -315,21 +287,6 @@
         </div>
     </section>
 
-    <!-- <section class="cultural" data-aos="fade-up">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Cultural Heritage</h2>
-        <div class="flower-container">
-            <svg viewBox="0 0 400 400" class="flower">
-                <path class="petal petal1" d="M200,200 Q150,150 200,100 Q250,150 200,200" />
-                <path class="petal petal2" d="M200,200 Q250,150 300,200 Q250,250 200,200" />
-                <path class="petal petal3" d="M200,200 Q150,250 200,300 Q250,250 200,200" />
-                <circle cx="200" cy="200" r="20" class="center" />
-                
-                <text x="200" y="130" class="flower-text">Gurudwara Influence</text>
-                <text x="300" y="200" class="flower-text">Independence Legacy</text>
-                <text x="200" y="270" class="flower-text">Sikh Values</text>
-            </svg>
-        </div>
-    </section> -->
 
     <script>
         AOS.init({
