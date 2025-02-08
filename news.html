@@ -5,10 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News & Media Coverage - Rashmi Nagpal</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Include Google Fonts to match other pages -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Add animation library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     
     <style>
+        /* Global Styles to ensure consistent font */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center content similar to the education page */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        /* Navigation styles with header align right */
+        .top-nav {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;  /* This makes the nav-links align to the right */
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        /* News grid and item styles */
         .news-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -34,6 +81,11 @@
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 1rem;
+            transition: transform 0.3s ease-in-out; /* Hover zoom effect */
+        }
+
+        .news-item img:hover {
+            transform: scale(1.05);
         }
 
         .news-item h2 {
@@ -47,10 +99,12 @@
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
+            transition: transform 0.3s ease;  /* Read More hover animation */
         }
 
         .read-more:hover {
             text-decoration: underline;
+            transform: translateX(5px);
         }
 
         .media-list {
@@ -60,6 +114,7 @@
         .media-links {
             display: flex;
             gap: 1rem;
+            justify-content: center;
         }
 
         .media-links a {
@@ -71,39 +126,12 @@
             text-decoration: underline;
         }
 
-        /* Navigation styles */
-        .top-nav {
-            background-color: white;
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #007bff;
-        }
-
         /* Responsive design */
         @media (max-width: 768px) {
             .news-grid {
                 grid-template-columns: 1fr;
             }
-
+            
             .nav-links {
                 gap: 1rem;
                 flex-wrap: wrap;
@@ -133,7 +161,7 @@
             <!-- MIT CSAIL News -->
             <article class="news-item" data-aos="fade-up">
                 <h2>MIT CSAIL News</h2>
-                <img src="path/to/mit-image.jpg" alt="MIT CSAIL News Coverage">
+                <img src="/images/mit.png" alt="MIT CSAIL News Coverage">
                 <p>Featured research on building responsible AI solutions that are fair and accurate. The framework enables a more nuanced approach to balancing fairness and accuracy in AI systems.</p>
                 <a href="https://techxplore.com/news/2024-11-ai-fair-accurate-framework-binary.html" class="read-more" target="_blank">Read More →</a>
             </article>
@@ -141,7 +169,7 @@
             <!-- Science X TechXplore -->
             <article class="news-item" data-aos="fade-up" data-aos-delay="100">
                 <h2>Science X TechXplore</h2>
-                <img src="path/to/sciencex-image.jpg" alt="Science X Coverage">
+                <img src="/images/berkeley.png" alt="Science X Coverage">
                 <p>Coverage of research work on responsible AI solutions and frameworks for balancing fairness and accuracy in machine learning models.</p>
                 <a href="https://techxplore.com/news/2024-11-ai-fair-accurate-framework-binary.html" class="read-more" target="_blank">Read More →</a>
             </article>
@@ -149,7 +177,7 @@
             <!-- Hindustan Times -->
             <article class="news-item" data-aos="fade-up" data-aos-delay="200">
                 <h2>Hindustan Times</h2>
-                <img src="path/to/ht-image.jpg" alt="Hindustan Times Coverage">
+                <img src="/images/ht.png" alt="Hindustan Times Coverage">
                 <p>Featured views on generative AI solutions and their impact on various industries.</p>
                 <a href="https://www.pressreader.com/india/hindustan-times-st-noida/20210908/282303913249955" class="read-more" target="_blank">Read More →</a>
             </article>
