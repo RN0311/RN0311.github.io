@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Media Coverage - Rashmi Nagpal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add animation library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .news-item {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .news-item h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .media-list {
+            margin: 1rem 0;
+        }
+
+        .media-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .media-links a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .media-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation styles */
+        .top-nav {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="publications.html">Publications</a>
+            <a href="projects.html">Projects</a>
+            <a href="talks.html">Talks</a>
+            <a href="news.html">News</a>
+            <a href="lectures.html">Lectures</a>
+            <a href="teachings.html">Lectures</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="page-title" data-aos="fade-down">News & Media Coverage</h1>
+
+        <section class="news-grid">
+            <!-- MIT CSAIL News -->
+            <article class="news-item" data-aos="fade-up">
+                <h2>MIT CSAIL News</h2>
+                <img src="path/to/mit-image.jpg" alt="MIT CSAIL News Coverage">
+                <p>Featured research on building responsible AI solutions that are fair and accurate. The framework enables a more nuanced approach to balancing fairness and accuracy in AI systems.</p>
+                <a href="https://techxplore.com/news/2024-11-ai-fair-accurate-framework-binary.html" class="read-more" target="_blank">Read More →</a>
+            </article>
+
+            <!-- Science X TechXplore -->
+            <article class="news-item" data-aos="fade-up" data-aos-delay="100">
+                <h2>Science X TechXplore</h2>
+                <img src="path/to/sciencex-image.jpg" alt="Science X Coverage">
+                <p>Coverage of research work on responsible AI solutions and frameworks for balancing fairness and accuracy in machine learning models.</p>
+                <a href="https://techxplore.com/news/2024-11-ai-fair-accurate-framework-binary.html" class="read-more" target="_blank">Read More →</a>
+            </article>
+
+            <!-- Hindustan Times -->
+            <article class="news-item" data-aos="fade-up" data-aos-delay="200">
+                <h2>Hindustan Times</h2>
+                <img src="path/to/ht-image.jpg" alt="Hindustan Times Coverage">
+                <p>Featured views on generative AI solutions and their impact on various industries.</p>
+                <a href="https://www.pressreader.com/india/hindustan-times-st-noida/20210908/282303913249955" class="read-more" target="_blank">Read More →</a>
+            </article>
+
+            <!-- International Media -->
+            <article class="news-item" data-aos="fade-up" data-aos-delay="300">
+                <h2>International Media Coverage</h2>
+                <div class="media-list">
+                    <p>🇪🇸 Spanish News Channel: Interview on building unbiased, fair ML systems</p>
+                    <p>🇨🇦 Canadian News Channel: Discussion on LLMs and no-code GenAI solutions</p>
+                </div>
+                <div class="media-links">
+                    <a href="https://www.instagram.com/p/Cs57Dvlgt_S/" target="_blank">Spanish Interview →</a>
+                    <a href="https://www.youtube.com/watch?v=g27xn3c1mss" target="_blank">Canadian Interview →</a>
+                </div>
+            </article>
+
+            <!-- Plaksha Feature -->
+            <article class="news-item" data-aos="fade-up" data-aos-delay="400">
+                <h2>Plaksha University Feature</h2>
+                <img src="path/to/plaksha-image.jpg" alt="Plaksha Coverage">
+                <p>Journey from receiving a full scholarship at Plaksha to landing a job in Silicon Valley.</p>
+                <a href="https://plaksha.edu.in/blog/giving-wings-to-rashmis-silicon-valley-dreams" class="read-more" target="_blank">Read More →</a>
+            </article>
+        </section>
+    </main>
+
+    <!-- Add AOS library for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>
