@@ -24,36 +24,38 @@
             font-size: 1rem;
         }
 
+        /* Updated top-nav to match index.html (top right, fixed position, padding, and background color) */
         .top-nav {
-            background-color: white;
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
+            position: fixed;
             top: 0;
+            right: 0;
+            padding: 20px;
             z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
         }
 
         .nav-links {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
+            gap: 20px;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
+            color: #424242;
+            font-weight: 400;
+            padding: 5px 10px;
             transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #007bff;
+            color: #a08036;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+            margin-top: 100px; /* add some top margin so content doesn't hide behind the fixed nav */
         }
 
         .lecture-grid {
