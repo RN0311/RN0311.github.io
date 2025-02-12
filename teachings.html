@@ -226,6 +226,102 @@
                 font-size: 1.2rem;
             }
         }
+
+        .personal-values {
+            padding: 4rem 2rem;
+            background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+        }
+
+        .values-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            padding: 2rem;
+        }
+
+        .value-card {
+            position: relative;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover .value-image {
+            transform: scale(1.05);
+        }
+
+        .value-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .value-content h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .value-content p {
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .floating-hearts span {
+            position: absolute;
+            font-size: 1.5rem;
+            color: #ff6b6b;
+            opacity: 0;
+            animation: float 3s infinite;
+        }
+
+        .floating-hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .floating-hearts span:nth-child(2) { left: 50%; animation-delay: 1s; }
+        .floating-hearts span:nth-child(3) { left: 80%; animation-delay: 2s; }
+
+        .sparkles span {
+            position: absolute;
+            font-size: 1.5rem;
+            color: #ffd700;
+            opacity: 0;
+            animation: sparkle 3s infinite;
+        }
+
+        .sparkles span:nth-child(1) { right: 10%; animation-delay: 0s; }
+        .sparkles span:nth-child(2) { right: 50%; animation-delay: 1s; }
+        .sparkles span:nth-child(3) { right: 80%; animation-delay: 2s; }
+
+        @keyframes float {
+            0% { bottom: 20%; opacity: 0; }
+            50% { opacity: 1; }
+            100% { bottom: 80%; opacity: 0; }
+        }
+
+        @keyframes sparkle {
+            0% { bottom: 20%; opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { bottom: 80%; opacity: 0; transform: scale(0); }
+        }
+
+        @media (max-width: 768px) {
+            .values-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -287,6 +383,38 @@
         </div>
     </section>
 
+    <!-- New Personal Values Section -->
+    <section class="personal-values">
+        <div class="values-container">
+            <!-- Animal Love Card -->
+            <div class="value-card" data-aos="fade-right">
+                <img src="/images/fluffy.png" alt="My Maltese Dogs" class="value-image">
+                <div class="value-content">
+                    <h3>Compassion for Animals</h3>
+                    <p>I love animals, especially Maltese dogs, as I believe animals bring unconditional love and the pure joy to our lives.</p>
+                </div>
+                <div class="floating-hearts">
+                    <span>♥</span>
+                    <span>♥</span>
+                    <span>♥</span>
+                </div>
+            </div>
+
+            <!-- Giving Back Card -->
+            <div class="value-card" data-aos="fade-left">
+                <img src="/images/" alt="Giving Back to Community" class="value-image">
+                <div class="value-content">
+                    <h3>Community Service</h3>
+                    <p>Every year, I enjoy the joy of giving by sharing books, stationery, and goodies with children at local homeless shelter.</p>
+                </div>
+                <div class="sparkles">
+                    <span>✨</span>
+                    <span>✨</span>
+                    <span>✨</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
         AOS.init({
